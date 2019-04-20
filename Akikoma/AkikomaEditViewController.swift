@@ -130,7 +130,10 @@ class AkikomaEditViewController: UIViewController, UICollectionViewDataSource, U
     
     @IBAction func deleteButtonTapped(){
         let alert: UIAlertController = UIAlertController(title: "削除", message: "本当にあきこまデータを削除しますか？", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "削除", style: .destructive, handler: nil)) //TODO!!: 削除する。
+        alert.addAction(UIAlertAction(title: "削除", style: .destructive, handler: {[weak alert] (action) -> Void in
+            self.akikomaIDArray = []
+            self.saveData.set(self.akikomaIDArray, forKey: "akikomaIDArray")
+        })) //TODO!!: 削除する。
         alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }

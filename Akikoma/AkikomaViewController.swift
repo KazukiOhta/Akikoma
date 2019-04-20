@@ -51,7 +51,7 @@ class AkikomaViewController: UIViewController, UICollectionViewDataSource, UICol
     
     
     func showSumArray() {
-        var summax = 0
+        var summax = 2
         for classIndex in 0..<ncol*nrow {
             summax = max(summax, akikomaSumArray[classIndex])
         }
@@ -60,9 +60,10 @@ class AkikomaViewController: UIViewController, UICollectionViewDataSource, UICol
             let cell = myCollectionView.cellForItem(at: indexPath)!
             let button = cell.contentView.viewWithTag(2) as! UIButton
             button.setTitle(String(akikomaSumArray[indexPath.row]), for: .normal)
+            
             if akikomaSumArray[indexPath.row] == summax{
                 button.backgroundColor = UIColor.hex(string: "#007AFF", alpha: 1)
-            } else if akikomaSumArray[indexPath.row] == summax-1 {
+            } else if akikomaSumArray[indexPath.row] == summax-1{
                 button.backgroundColor = UIColor.hex(string: "#88C1FF", alpha: 1)
             } else {
                 button.backgroundColor = UIColor.hex(string: "#D8E3FF", alpha: 1)
