@@ -20,7 +20,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lek-xk-4Ez">
                                 <rect key="frame" x="0.0" y="88" width="414" height="759"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="Z7c-lf-Rj4">
                                     <size key="itemSize" width="150" height="150"/>
@@ -36,27 +36,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKf-2E-eVX">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKf-2E-eVX">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zou-Lc-Gfu">
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zou-Lc-Gfu">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 </button>
                                             </subviews>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="yKf-2E-eVX" firstAttribute="leading" secondItem="0yT-U4-TbB" secondAttribute="leading" id="3Cq-QJ-eJs"/>
-                                            <constraint firstItem="Zou-Lc-Gfu" firstAttribute="leading" secondItem="yKf-2E-eVX" secondAttribute="leading" id="76d-el-dfT"/>
-                                            <constraint firstItem="Zou-Lc-Gfu" firstAttribute="bottom" secondItem="yKf-2E-eVX" secondAttribute="bottom" id="DhW-3b-GdQ"/>
-                                            <constraint firstAttribute="trailing" secondItem="yKf-2E-eVX" secondAttribute="trailing" id="PzQ-I8-Lx7"/>
-                                            <constraint firstAttribute="bottom" secondItem="yKf-2E-eVX" secondAttribute="bottom" id="btX-gM-TmO"/>
-                                            <constraint firstItem="yKf-2E-eVX" firstAttribute="trailing" secondItem="Zou-Lc-Gfu" secondAttribute="trailing" id="nB2-4Y-0CE"/>
-                                            <constraint firstItem="Zou-Lc-Gfu" firstAttribute="top" secondItem="0yT-U4-TbB" secondAttribute="top" id="rJu-P8-iEN"/>
-                                            <constraint firstItem="yKf-2E-eVX" firstAttribute="top" secondItem="Zou-Lc-Gfu" secondAttribute="top" id="udv-AO-1k5"/>
-                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -97,7 +89,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZEV-ul-Jxo">
                                 <rect key="frame" x="0.0" y="88" width="414" height="604"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="9be-4m-2m8">
                                     <size key="itemSize" width="124" height="124"/>
@@ -126,22 +118,13 @@
                                     <outlet property="delegate" destination="BQd-c4-J6l" id="C8Q-M3-l3E"/>
                                 </connections>
                             </collectionView>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5li-ac-vYT">
-                                <rect key="frame" x="0.0" y="847" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="pIS-C2-8GC"/>
-                                    <tabBarItem systemItem="more" id="QYy-mY-e9V"/>
-                                </items>
-                            </tabBar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wn2-2Q-g4E">
-                                <rect key="frame" x="0.0" y="700" width="414" height="147"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                <rect key="frame" x="0.0" y="749" width="414" height="147"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H68-6H-iMa">
-                                        <rect key="frame" x="8" y="104" width="196" height="46"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                        <rect key="frame" x="2" y="80" width="204" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.85273972600000003" blue="0.85273972600000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <state key="normal" title="削除">
@@ -152,8 +135,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5h-uv-7Ky">
-                                        <rect key="frame" x="8" y="50" width="398" height="46"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                        <rect key="frame" x="2" y="38" width="410" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                         <color key="backgroundColor" red="0.792156862745098" green="0.88627450980392153" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <state key="normal" title="あきこまコード：ほげほげほげ"/>
@@ -162,8 +145,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3K-fO-h93">
-                                        <rect key="frame" x="8" y="-4" width="398" height="46"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                        <rect key="frame" x="2" y="-4" width="410" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.792156862745098" green="0.88627450980392153" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <state key="normal" title="名前：名無し"/>
@@ -172,8 +155,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFs-5y-zDP">
-                                        <rect key="frame" x="210" y="104" width="196" height="46"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                        <rect key="frame" x="208" y="80" width="204" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                         <color key="backgroundColor" red="0.85398212259999995" green="1" blue="0.85273972600000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <state key="normal" title="保存">

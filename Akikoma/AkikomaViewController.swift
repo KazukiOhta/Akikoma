@@ -65,7 +65,7 @@ class AkikomaViewController: UIViewController, UICollectionViewDataSource, UICol
             } else if akikomaSumArray[indexPath.row] == summax-1 {
                 button.backgroundColor = UIColor.hex(string: "#88C1FF", alpha: 1)
             } else {
-                button.backgroundColor = UIColor.hex(string: "#E8F3FF", alpha: 1)
+                button.backgroundColor = UIColor.hex(string: "#D8E3FF", alpha: 1)
             }
         }
     }
@@ -88,7 +88,7 @@ class AkikomaViewController: UIViewController, UICollectionViewDataSource, UICol
             label.backgroundColor = UIColor.clear
             label.numberOfLines = 1
             label.textAlignment = NSTextAlignment.center
-            label.font = UIFont(name: "Futura", size: 40)
+            label.font = UIFont(name: "Futura", size: 30)
             button.setTitleColor(UIColor.white, for: .normal)
             button.setTitle(String(akikomaSumArray[indexPath.row]), for: .normal)
         } else {

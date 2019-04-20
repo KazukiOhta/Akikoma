@@ -26,18 +26,15 @@ class AkikomaEditViewController: UIViewController, UICollectionViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         //TODO!!: このへんのロードが雑すぎるので治す。
-        if saveData.value(forKey: "akikomaArrayIndex") != nil{
-            akikomaArrayIndex = saveData.value(forKey: "akikomaArrayIndex") as? Int
-        } else {
-            akikomaArrayIndex = 0
-        }
-        if saveData.array(forKey: "akikomaIDArray") != nil{
-            akikomaIDArray = saveData.array(forKey: "akikomaIDArray") as? [Int64]
-        } else {
+        if saveData.array(forKey: "akikomaIDArray") as? [Int64] == nil{
+            print("Initialization")
             akikomaIDArray = []
+            saveData.set(akikomaIDArray, forKey: "akikomaIDArray")
         }
         if isNewPerson {
+            akikomaIDArray = saveData.array(forKey: "akikomaIDArray") as? [Int64]
             akikomaIDArray.append(0)
+            akikomaArrayIndex = akikomaIDArray.count-1
         }
         print("in viewDidLoad, akikomaIDArray[akikomaArrayIndex] = ", akikomaIDArray[akikomaArrayIndex])
         akikomaArray = Common.akikomaID2akikomaArray(akikomaID: akikomaID, numberOfClasses: nrow*ncol)
