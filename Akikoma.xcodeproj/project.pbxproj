@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CFC65698226AC5DE00C1424D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC65697226AC5DE00C1424D /* AppDelegate.swift */; };
-		CFC6569A226AC5DE00C1424D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC65699226AC5DE00C1424D /* ViewController.swift */; };
 		CFC6569D226AC5DE00C1424D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC6569B226AC5DE00C1424D /* Main.storyboard */; };
 		CFC6569F226AC5DF00C1424D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC6569E226AC5DF00C1424D /* Assets.xcassets */; };
 		CFC656A2226AC5DF00C1424D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC656A0226AC5DF00C1424D /* LaunchScreen.storyboard */; };
 		CFC656AD226AC5DF00C1424D /* AkikomaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC656AC226AC5DF00C1424D /* AkikomaTests.swift */; };
 		CFC656B8226AC5DF00C1424D /* AkikomaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC656B7226AC5DF00C1424D /* AkikomaUITests.swift */; };
+		CFE67E18226ADC20003641B4 /* AkikomaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE67E17226ADC20003641B4 /* AkikomaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		CFC65694226AC5DE00C1424D /* Akikoma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Akikoma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC65697226AC5DE00C1424D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CFC65699226AC5DE00C1424D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CFC6569C226AC5DE00C1424D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFC6569E226AC5DF00C1424D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFC656A1226AC5DF00C1424D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		CFC656B3226AC5DF00C1424D /* AkikomaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AkikomaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC656B7226AC5DF00C1424D /* AkikomaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkikomaUITests.swift; sourceTree = "<group>"; };
 		CFC656B9226AC5DF00C1424D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFE67E17226ADC20003641B4 /* AkikomaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkikomaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				CFC65697226AC5DE00C1424D /* AppDelegate.swift */,
-				CFC65699226AC5DE00C1424D /* ViewController.swift */,
+				CFE67E17226ADC20003641B4 /* AkikomaViewController.swift */,
 				CFC6569B226AC5DE00C1424D /* Main.storyboard */,
 				CFC6569E226AC5DF00C1424D /* Assets.xcassets */,
 				CFC656A0226AC5DF00C1424D /* LaunchScreen.storyboard */,
@@ -256,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFC6569A226AC5DE00C1424D /* ViewController.swift in Sources */,
+				CFE67E18226ADC20003641B4 /* AkikomaViewController.swift in Sources */,
 				CFC65698226AC5DE00C1424D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
