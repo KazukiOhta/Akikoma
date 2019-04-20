@@ -8,70 +8,61 @@
 
 import UIKit
 
-class AkikomaEditViewController: UIViewController {
+class AkikomaEditViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
+    var akikomaID: Int64 = 123//!!
+    var akikomaArray: [Bool]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        akikomaArray = Common.akikomaID2akikomaArray(akikomaID: akikomaID, numberOfClasses: 30)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0{
-            return 30 //!!
-        } else {
-            return 9
-        }
+        print("30!")
+        return 30 //!!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let section: Int = indexPath.section
+        print(indexPath)
         let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        if section == 0{
-            // Akikoma Cells
-            let label = cell.contentView.viewWithTag(1) as! UILabel
-            label.backgroundColor = UIColor.white
-            label.numberOfLines = 1
-            label.textAlignment = NSTextAlignment.center
-            label.font = UIFont(name: "Futura", size: 20)
-            label.text = String(indexPath.row)
+        
+        let label = cell.contentView.viewWithTag(1) as! UILabel
+        label.numberOfLines = 1
+        label.textAlignment = NSTextAlignment.center
+        label.font = UIFont(name: "Futura", size: 30)
+        if akikomaArray[indexPath.row]{
+            label.backgroundColor = UIColor.hex(string: "#FFE3BB", alpha: 1)
+            label.textColor = UIColor.hex(string: "#F78F00", alpha: 1)
+            label.text = "授業"
         } else {
-            // People Cells
-            let label = cell.contentView.viewWithTag(1) as! UILabel
-            label.backgroundColor = UIColor.white
-            label.numberOfLines = 2
-            label.textAlignment = NSTextAlignment.left
-            label.font = UIFont(name: "Futura", size: 10)
-            label.text = "名前：　" + String(indexPath.row) + "\n" + "あきこまコード：　" + String(17*indexPath.row)//!!
-            let button = cell.contentView.viewWithTag(2) as! UIButton
-            button.tag = 1+indexPath.row
-            button.addTarget(self, action: #selector(self.peopleButton), for: .touchUpInside)
+            label.backgroundColor = UIColor.hex(string: "#CAE2FF", alpha: 1)
+            label.textColor = UIColor.hex(string: "#007AFF", alpha: 1)
+            label.text = "空き"
         }
+        let button = cell.contentView.viewWithTag(2) as! UIButton
+        button.tag = 1+indexPath.row
+        button.addTarget(self, action: #selector(self.hogeButton), for: .touchUpInside)
         
         return cell
     }
     
-    @objc func peopleButton(sender: UIButton){
+    @objc func hogeButton(sender: UIButton){
         let row = sender.tag - 1
         print("People", row)
-        self.performSegue(withIdentifier: "toAkikomaEditView", sender: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if indexPath.section == 0{
-            let horizontalMargin: CGFloat = 2 //横方向のMargin
-            let cellSize: CGFloat = self.view.bounds.width/5 - horizontalMargin
-            return CGSize(width: cellSize, height: cellSize)
-        } else {
-            let horizontalMargin: CGFloat = 2 //横方向のMargin
-            let cellSize: CGFloat = self.view.bounds.width/3 - horizontalMargin
-            return CGSize(width: cellSize, height: cellSize/2)
-        }
+        let horizontalMargin: CGFloat = 2 //横方向のMargin
+        let cellSize: CGFloat = self.view.bounds.width/5 - horizontalMargin
+        return CGSize(width: cellSize, height: cellSize)
+        
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 1
     }
 
 

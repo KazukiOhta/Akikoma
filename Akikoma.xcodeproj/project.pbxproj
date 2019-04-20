@@ -15,6 +15,8 @@
 		CFC656B8226AC5DF00C1424D /* AkikomaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC656B7226AC5DF00C1424D /* AkikomaUITests.swift */; };
 		CFE67E18226ADC20003641B4 /* AkikomaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE67E17226ADC20003641B4 /* AkikomaViewController.swift */; };
 		CFE67E1A226AEE3D003641B4 /* AkikomaEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE67E19226AEE3D003641B4 /* AkikomaEditViewController.swift */; };
+		CFE67E1C226AF20C003641B4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE67E1B226AF20C003641B4 /* Extension.swift */; };
+		CFE67E1E226AF73D003641B4 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE67E1D226AF73D003641B4 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		CFC656B9226AC5DF00C1424D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFE67E17226ADC20003641B4 /* AkikomaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkikomaViewController.swift; sourceTree = "<group>"; };
 		CFE67E19226AEE3D003641B4 /* AkikomaEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkikomaEditViewController.swift; sourceTree = "<group>"; };
+		CFE67E1B226AF20C003641B4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		CFE67E1D226AF73D003641B4 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				CFC65697226AC5DE00C1424D /* AppDelegate.swift */,
 				CFE67E17226ADC20003641B4 /* AkikomaViewController.swift */,
 				CFE67E19226AEE3D003641B4 /* AkikomaEditViewController.swift */,
+				CFE67E1D226AF73D003641B4 /* Common.swift */,
+				CFE67E1B226AF20C003641B4 /* Extension.swift */,
 				CFC6569B226AC5DE00C1424D /* Main.storyboard */,
 				CFC6569E226AC5DF00C1424D /* Assets.xcassets */,
 				CFC656A0226AC5DF00C1424D /* LaunchScreen.storyboard */,
@@ -262,6 +268,8 @@
 				CFE67E18226ADC20003641B4 /* AkikomaViewController.swift in Sources */,
 				CFE67E1A226AEE3D003641B4 /* AkikomaEditViewController.swift in Sources */,
 				CFC65698226AC5DE00C1424D /* AppDelegate.swift in Sources */,
+				CFE67E1E226AF73D003641B4 /* Common.swift in Sources */,
+				CFE67E1C226AF20C003641B4 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
