@@ -10,6 +10,8 @@ import UIKit
 
 class AkikomaEditViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
+    let ncol = 5
+    let nrow = 6
     var akikomaID: Int64 = 123//!!
     var akikomaArray: [Bool]!
     var name: String = "名無し"
@@ -19,19 +21,20 @@ class AkikomaEditViewController: UIViewController, UICollectionViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        akikomaArray = Common.akikomaID2akikomaArray(akikomaID: akikomaID, numberOfClasses: 30)
+        akikomaArray = Common.akikomaID2akikomaArray(akikomaID: akikomaID, numberOfClasses: nrow*ncol)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("30!")
-        return 30 //!!
+        return ncol*nrow
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         print(indexPath)
         let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
         
-        let label = cell.contentView.viewWithTag(1) as! UILabel
+        //let label = cell.contentView.viewWithTag(1) as! UILabel
+        let button = cell.contentView.viewWithTag(2) as! UIButton
+        let label:UILabel = button.titleLabel!
         label.numberOfLines = 1
         label.textAlignment = NSTextAlignment.center
         label.font = UIFont(name: "Futura", size: 30)
@@ -44,16 +47,19 @@ class AkikomaEditViewController: UIViewController, UICollectionViewDataSource, U
             label.textColor = UIColor.hex(string: "#007AFF", alpha: 1)
             label.text = "空き"
         }
-        let button = cell.contentView.viewWithTag(2) as! UIButton
         button.tag = 1+indexPath.row
-        button.addTarget(self, action: #selector(self.hogeButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.AkikomaEditButton(sender:)), for: .touchUpInside)
         
         return cell
     }
     
-    @objc func hogeButton(sender: UIButton){
+    @objc func AkikomaEditButton(sender: UIButton){
         let row = sender.tag - 1
-        print("People", row)
+        let address:Int64 = 1<<row
+        akikomaID ^= address
+        print("akikomaID:", akikomaID)
+        akikomaArray = Common.akikomaID2akikomaArray(akikomaID: akikomaID, numberOfClasses: ncol*nrow)
+        print("akikomaArray:", akikomaArray!)
     }
     
     func collectionView(_ collectionView: UICollectionView,
