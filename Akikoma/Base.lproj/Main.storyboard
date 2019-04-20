@@ -36,19 +36,27 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKf-2E-eVX">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKf-2E-eVX">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zou-Lc-Gfu">
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zou-Lc-Gfu">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </button>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="yKf-2E-eVX" firstAttribute="leading" secondItem="0yT-U4-TbB" secondAttribute="leading" id="3Cq-QJ-eJs"/>
+                                            <constraint firstItem="Zou-Lc-Gfu" firstAttribute="leading" secondItem="yKf-2E-eVX" secondAttribute="leading" id="76d-el-dfT"/>
+                                            <constraint firstItem="Zou-Lc-Gfu" firstAttribute="bottom" secondItem="yKf-2E-eVX" secondAttribute="bottom" id="DhW-3b-GdQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="yKf-2E-eVX" secondAttribute="trailing" id="PzQ-I8-Lx7"/>
+                                            <constraint firstAttribute="bottom" secondItem="yKf-2E-eVX" secondAttribute="bottom" id="btX-gM-TmO"/>
+                                            <constraint firstItem="yKf-2E-eVX" firstAttribute="trailing" secondItem="Zou-Lc-Gfu" secondAttribute="trailing" id="nB2-4Y-0CE"/>
+                                            <constraint firstItem="Zou-Lc-Gfu" firstAttribute="top" secondItem="0yT-U4-TbB" secondAttribute="top" id="rJu-P8-iEN"/>
+                                            <constraint firstItem="yKf-2E-eVX" firstAttribute="top" secondItem="Zou-Lc-Gfu" secondAttribute="top" id="udv-AO-1k5"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -70,6 +78,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="あきこま" id="clb-DZ-CBj"/>
+                    <connections>
+                        <segue destination="BQd-c4-J6l" kind="show" identifier="toAkikomaEditView" id="Rhv-v4-5Fl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

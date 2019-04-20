@@ -1,5 +1,5 @@
 //
-//  AkikomaViewController.swift
+//  AkikomaEditViewController.swift
 //  Akikoma
 //
 //  Created by 太田 一毅 on 2019/04/20.
@@ -8,16 +8,13 @@
 
 import UIKit
 
-class AkikomaViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
+class AkikomaEditViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0{
             return 30 //!!
@@ -76,5 +73,6 @@ class AkikomaViewController: UIViewController, UICollectionViewDataSource, UICol
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
+
 
 }
