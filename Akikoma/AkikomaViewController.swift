@@ -13,13 +13,14 @@ class AkikomaViewController: UIViewController, UICollectionViewDataSource, UICol
     let saveData = UserDefaults.standard
     var akikomaIDArray: [Int64]!
     var akikomaSumArray: [Int]!
+    @IBOutlet var myCollectionView: UICollectionView!
     
     let ncol = 5
     let nrow = 6
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        akikomaSumArray = Array(repeating: 0, count: ncol*nrow)
         // Do any additional setup after loading the view.
     }
     
@@ -32,7 +33,7 @@ class AkikomaViewController: UIViewController, UICollectionViewDataSource, UICol
             akikomaIDArray = []
             print("akikomaIDArray = []")
         }
-        
+        print("akikomaIDArray: ", akikomaIDArray)
         akikomaSumArray = []
         for classIndex in 0..<ncol*nrow {
             var sum = 0
@@ -43,6 +44,29 @@ class AkikomaViewController: UIViewController, UICollectionViewDataSource, UICol
                 }
             }
             akikomaSumArray.append(sum)
+        }
+        print("akikomaSumArray: ", akikomaSumArray)
+        showSumArray()
+    }
+    
+    
+    func showSumArray() {
+        var summax = 0
+        for classIndex in 0..<ncol*nrow {
+            summax = max(summax, akikomaSumArray[classIndex])
+        }
+        for classIndex in 0..<ncol*nrow {
+            let indexPath = IndexPath(row: classIndex, section: 0)
+            let cell = myCollectionView.cellForItem(at: indexPath)!
+            let button = cell.contentView.viewWithTag(2) as! UIButton
+            button.setTitle(String(akikomaSumArray[indexPath.row]), for: .normal)
+            if akikomaSumArray[indexPath.row] == summax{
+                button.backgroundColor = UIColor.hex(string: "#007AFF", alpha: 1)
+            } else if akikomaSumArray[indexPath.row] == summax-1 {
+                button.backgroundColor = UIColor.hex(string: "#88C1FF", alpha: 1)
+            } else {
+                button.backgroundColor = UIColor.hex(string: "#E8F3FF", alpha: 1)
+            }
         }
     }
     
@@ -59,12 +83,14 @@ class AkikomaViewController: UIViewController, UICollectionViewDataSource, UICol
         let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
         if section == 0{
             // Akikoma Cells
-            let label = cell.contentView.viewWithTag(1) as! UILabel
-            label.backgroundColor = UIColor.white
+            let button = cell.contentView.viewWithTag(2) as! UIButton
+            let label: UILabel = button.titleLabel!
+            label.backgroundColor = UIColor.clear
             label.numberOfLines = 1
             label.textAlignment = NSTextAlignment.center
-            label.font = UIFont(name: "Futura", size: 20)
-            label.text = String(indexPath.row)
+            label.font = UIFont(name: "Futura", size: 40)
+            button.setTitleColor(UIColor.white, for: .normal)
+            button.setTitle(String(akikomaSumArray[indexPath.row]), for: .normal)
         } else {
             // People Cells
             let label = cell.contentView.viewWithTag(1) as! UILabel

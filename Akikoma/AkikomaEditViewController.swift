@@ -18,7 +18,7 @@ class AkikomaEditViewController: UIViewController, UICollectionViewDataSource, U
     var akikomaArrayIndex: Int!
     var name: String = "名無し"
     var akikomaIDArray: [Int64]!
-    var isNewPerson: Bool = false//!!新規の登録かどうか
+    var isNewPerson: Bool = true//!!新規の登録かどうか
     @IBOutlet var nameButton: UIButton!
     @IBOutlet var akikomaCodeButton: UIButton!
     
@@ -39,7 +39,7 @@ class AkikomaEditViewController: UIViewController, UICollectionViewDataSource, U
         if isNewPerson {
             akikomaIDArray.append(0)
         }
-        print(akikomaIDArray[akikomaArrayIndex])
+        print("in viewDidLoad, akikomaIDArray[akikomaArrayIndex] = ", akikomaIDArray[akikomaArrayIndex])
         akikomaArray = Common.akikomaID2akikomaArray(akikomaID: akikomaID, numberOfClasses: nrow*ncol)
 
     }
@@ -49,7 +49,6 @@ class AkikomaEditViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print(indexPath)
         let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
         
         //let label = cell.contentView.viewWithTag(1) as! UILabel

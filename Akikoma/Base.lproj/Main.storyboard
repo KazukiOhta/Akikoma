@@ -79,6 +79,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="あきこま" id="clb-DZ-CBj"/>
                     <connections>
+                        <outlet property="myCollectionView" destination="lek-xk-4Ez" id="MFR-xE-JHQ"/>
                         <segue destination="BQd-c4-J6l" kind="show" identifier="toAkikomaEditView" id="Rhv-v4-5Fl"/>
                     </connections>
                 </viewController>
