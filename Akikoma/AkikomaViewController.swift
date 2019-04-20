@@ -45,8 +45,17 @@ class AkikomaViewController: UIViewController, UICollectionViewDataSource, UICol
             label.textAlignment = NSTextAlignment.left
             label.font = UIFont(name: "Futura", size: 10)
             label.text = "名前：　" + String(indexPath.row) + "\n" + "あきこまコード：　" + String(17*indexPath.row)//!!
+            let button = cell.contentView.viewWithTag(2) as! UIButton
+            button.tag = 1+indexPath.row
+            button.addTarget(self, action: #selector(self.peopleButton), for: .touchUpInside)
         }
+        
         return cell
+    }
+    
+    @objc func peopleButton(sender: UIButton){
+        let row = sender.tag - 1
+        print("People", row)
     }
     
     func collectionView(_ collectionView: UICollectionView,
