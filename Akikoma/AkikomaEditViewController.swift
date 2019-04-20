@@ -10,18 +10,38 @@ import UIKit
 
 class AkikomaEditViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
+    let saveData = UserDefaults.standard
     let ncol = 5
     let nrow = 6
-    var akikomaID: Int64 = 123//!!
+    var akikomaID: Int64 = 0//!!
     var akikomaArray: [Bool]!
+    var akikomaArrayIndex: Int!
     var name: String = "名無し"
+    var akikomaIDArray: [Int64]!
+    var isNewPerson: Bool = false//!!新規の登録かどうか
     @IBOutlet var nameButton: UIButton!
     @IBOutlet var akikomaCodeButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //TODO!!: このへんのロードが雑すぎるので治す。
+        if saveData.value(forKey: "akikomaArrayIndex") != nil{
+            akikomaArrayIndex = saveData.value(forKey: "akikomaArrayIndex") as? Int
+        } else {
+            akikomaArrayIndex = 0
+        }
+        if saveData.array(forKey: "akikomaIDArray") != nil{
+            akikomaIDArray = saveData.array(forKey: "akikomaIDArray") as? [Int64]
+        } else {
+            akikomaIDArray = []
+        }
+        if isNewPerson {
+            akikomaIDArray.append(0)
+        }
+        print(akikomaIDArray[akikomaArrayIndex])
         akikomaArray = Common.akikomaID2akikomaArray(akikomaID: akikomaID, numberOfClasses: nrow*ncol)
+
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -60,6 +80,15 @@ class AkikomaEditViewController: UIViewController, UICollectionViewDataSource, U
         print("akikomaID:", akikomaID)
         akikomaArray = Common.akikomaID2akikomaArray(akikomaID: akikomaID, numberOfClasses: ncol*nrow)
         print("akikomaArray:", akikomaArray!)
+        if akikomaArray[row]{
+            sender.backgroundColor = UIColor.hex(string: "#FFE3BB", alpha: 1)
+            sender.setTitleColor(UIColor.hex(string: "#F78F00", alpha: 1), for: .normal)
+            sender.setTitle("授業", for: .normal)
+        } else {
+            sender.backgroundColor = UIColor.hex(string: "#CAE2FF", alpha: 1)
+            sender.setTitleColor(UIColor.hex(string: "#007AFF", alpha: 1), for: .normal)
+            sender.setTitle("空き", for: .normal)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -104,16 +133,19 @@ class AkikomaEditViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     @IBAction func deleteButtonTapped(){
-        let alert: UIAlertController = UIAlertController(title: "削除", message: "本当にこのあきこまデータを削除しますか？", preferredStyle: .alert)
+        let alert: UIAlertController = UIAlertController(title: "削除", message: "本当にあきこまデータを削除しますか？", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "削除", style: .destructive, handler: nil)) //TODO!!: 削除する。
         alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func saveButtonTapped(){
-        let alert: UIAlertController = UIAlertController(title: "保存", message: "このあきこまデータを保存します。", preferredStyle: .alert)
+        let alert: UIAlertController = UIAlertController(title: "保存", message: "あきこまデータを保存しますか？", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "保存", style: .default, handler: nil)) //TODO!!: 保存する。
+        alert.addAction(UIAlertAction(title: "保存", style: .default, handler: {[weak alert] (action) -> Void in
+            self.akikomaIDArray[self.akikomaArrayIndex] = self.akikomaID
+            self.saveData.set(self.akikomaIDArray, forKey: "akikomaIDArray")
+        })) //TODO!!: 保存する。
         self.present(alert, animated: true, completion: nil)
     }
 

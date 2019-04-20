@@ -10,14 +10,42 @@ import UIKit
 
 class AkikomaViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-
+    let saveData = UserDefaults.standard
+    var akikomaIDArray: [Int64]!
+    var akikomaSumArray: [Int]!
+    
+    let ncol = 5
+    let nrow = 6
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if saveData.array(forKey: "akikomaIDArray") != nil{
+            akikomaIDArray = saveData.array(forKey: "akikomaIDArray") as? [Int64]
+        } else {
+            akikomaIDArray = []
+            print("akikomaIDArray = []")
+        }
+        
+        akikomaSumArray = []
+        for classIndex in 0..<ncol*nrow {
+            var sum = 0
+            for peopleIndex in 0..<akikomaIDArray.count{
+                let akikomaArray: [Bool] = Common.akikomaID2akikomaArray(akikomaID: akikomaIDArray[peopleIndex], numberOfClasses: ncol*nrow)
+                if akikomaArray[classIndex] == false{
+                    sum += 1
+                }
+            }
+            akikomaSumArray.append(sum)
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0{
             return 30 //!!
@@ -76,5 +104,5 @@ class AkikomaViewController: UIViewController, UICollectionViewDataSource, UICol
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
-
+    
 }
