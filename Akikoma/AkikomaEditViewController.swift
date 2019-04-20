@@ -39,13 +39,13 @@ class AkikomaEditViewController: UIViewController, UICollectionViewDataSource, U
         label.textAlignment = NSTextAlignment.center
         label.font = UIFont(name: "Futura", size: 30)
         if akikomaArray[indexPath.row]{
-            label.backgroundColor = UIColor.hex(string: "#FFE3BB", alpha: 1)
-            label.textColor = UIColor.hex(string: "#F78F00", alpha: 1)
-            label.text = "授業"
+            button.backgroundColor = UIColor.hex(string: "#FFE3BB", alpha: 1)
+            button.setTitleColor(UIColor.hex(string: "#F78F00", alpha: 1), for: .normal)
+            button.setTitle("授業", for: .normal)
         } else {
-            label.backgroundColor = UIColor.hex(string: "#CAE2FF", alpha: 1)
-            label.textColor = UIColor.hex(string: "#007AFF", alpha: 1)
-            label.text = "空き"
+            button.backgroundColor = UIColor.hex(string: "#CAE2FF", alpha: 1)
+            button.setTitleColor(UIColor.hex(string: "#007AFF", alpha: 1), for: .normal)
+            button.setTitle("空き", for: .normal)
         }
         button.tag = 1+indexPath.row
         button.addTarget(self, action: #selector(self.AkikomaEditButton(sender:)), for: .touchUpInside)
