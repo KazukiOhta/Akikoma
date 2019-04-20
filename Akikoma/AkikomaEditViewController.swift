@@ -12,6 +12,10 @@ class AkikomaEditViewController: UIViewController, UICollectionViewDataSource, U
 
     var akikomaID: Int64 = 123//!!
     var akikomaArray: [Bool]!
+    var name: String = "名無し"
+    @IBOutlet var nameButton: UIButton!
+    @IBOutlet var akikomaCodeButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,5 +69,46 @@ class AkikomaEditViewController: UIViewController, UICollectionViewDataSource, U
         return 1
     }
 
+    @IBAction func nameButtonTapped(){
+        let alert: UIAlertController = UIAlertController(title: "名前の変更", message: "新しい名前を入力してください。", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: {(text:UITextField!) -> Void in
+            text.text = self.name
+        })
+        alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "変更", style: .default, handler: {[weak alert] (action) -> Void in
+            guard let textFields = alert?.textFields else {
+                return
+            }
+            guard !textFields.isEmpty else {
+                return
+            }
+            for text in textFields {
+                self.name = text.text!
+                self.nameButton.setTitle("名前：" + self.name, for: .normal)
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func akikomaCodeButtonTapped(){
+        // TODO!!: あきこまコードに対応させる。
+        let alert: UIAlertController = UIAlertController(title: "あきこまコードの変更", message: "今はなにもないよ", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func deleteButtonTapped(){
+        let alert: UIAlertController = UIAlertController(title: "削除", message: "本当にこのあきこまデータを削除しますか？", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "削除", style: .destructive, handler: nil)) //TODO!!: 削除する。
+        alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func saveButtonTapped(){
+        let alert: UIAlertController = UIAlertController(title: "保存", message: "このあきこまデータを保存します。", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "保存", style: .default, handler: nil)) //TODO!!: 保存する。
+        self.present(alert, animated: true, completion: nil)
+    }
 
 }

@@ -154,6 +154,9 @@
                                         <state key="normal" title="削除">
                                             <color key="titleColor" red="0.95373218910000002" green="0.080488906430000007" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="deleteButtonTapped" destination="BQd-c4-J6l" eventType="touchUpInside" id="ZBo-0l-6Sf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5h-uv-7Ky">
                                         <rect key="frame" x="8" y="50" width="398" height="46"/>
@@ -161,13 +164,19 @@
                                         <color key="backgroundColor" red="0.792156862745098" green="0.88627450980392153" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <state key="normal" title="あきこまコード：ほげほげほげ"/>
+                                        <connections>
+                                            <action selector="akikomaCodeButtonTapped" destination="BQd-c4-J6l" eventType="touchUpInside" id="P0R-Fz-BR1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3K-fO-h93">
                                         <rect key="frame" x="8" y="-4" width="398" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <color key="backgroundColor" red="0.792156862745098" green="0.88627450980392153" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                        <state key="normal" title="名前：はいら"/>
+                                        <state key="normal" title="名前：名無し"/>
+                                        <connections>
+                                            <action selector="nameButtonTapped" destination="BQd-c4-J6l" eventType="touchUpInside" id="fxi-7w-MZH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFs-5y-zDP">
                                         <rect key="frame" x="210" y="104" width="196" height="46"/>
@@ -177,6 +186,9 @@
                                         <state key="normal" title="保存">
                                             <color key="titleColor" red="0.13591609590000001" green="0.5" blue="0.1655828231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveButtonTapped" destination="BQd-c4-J6l" eventType="touchUpInside" id="cHO-CR-WtB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -185,6 +197,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="H8I-GC-BSx"/>
                     </view>
+                    <connections>
+                        <outlet property="akikomaCodeButton" destination="L5h-uv-7Ky" id="1xE-q3-vhd"/>
+                        <outlet property="nameButton" destination="U3K-fO-h93" id="fHc-lm-ixv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uqw-4c-Pqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
