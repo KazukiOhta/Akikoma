@@ -58,9 +58,12 @@ class ScheduleListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //セルの選択解除
         tableView.deselectRow(at: indexPath, animated: true)
-        
+   
+        print("いくぜ！")
+        performSegue(withIdentifier: "toScheduleEditView",sender: nil)
+
         //ここに遷移処理を書く
-        self.present(ScheduleEditViewController(), animated: true, completion: nil)
+//        self.present(ScheduleEditViewController(), animated: true, completion: nil)
     }
     
     
