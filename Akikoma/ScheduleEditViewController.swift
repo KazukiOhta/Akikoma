@@ -21,7 +21,8 @@ class ScheduleEditViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.textField.delegate = self
+        print("きたよ！")
+        //self.textField.delegate = self
         // Do any additional setup after loading the view.
     }
     

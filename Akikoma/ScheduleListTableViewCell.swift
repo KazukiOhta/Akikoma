@@ -15,9 +15,7 @@ class ScheduleListTableViewCell: UITableViewCell {
     @IBOutlet var dayLabel: UILabel!
     @IBOutlet var periodLabel: UILabel!
     @IBOutlet var classNameLabel: UILabel!
-    @IBAction func EditButton(){
-        print("EDIT")
-    }
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
