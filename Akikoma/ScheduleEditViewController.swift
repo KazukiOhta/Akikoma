@@ -8,14 +8,13 @@
 
 import UIKit
 
-class ScheduleEditViewController: UIViewController, UITextFieldDelegate {
+class ScheduleEditViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
 
     // !!
     var day: Int = 0
     var period: Int = 0
     var className: String = "授業名"
     
-    @IBOutlet var textField: UITextField!
     @IBOutlet var monBtn: UIButton!
     @IBOutlet var tueBtn: UIButton!
     @IBOutlet var wedBtn: UIButton!
@@ -35,14 +34,43 @@ class ScheduleEditViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       
+        navigationController?.delegate = self
         show()
+        classNameTextField.addTarget(self, action: "textFieldDidChange:",for: UIControl.Event.editingChanged)
+    }
+    
+   
+    @IBAction func backButton() {
+
+        let myAlert = UIAlertController(title: "タイトル", message: "message", preferredStyle: UIAlertController.Style.actionSheet)
+        
+        // アクションを生成.
+        let myAction_1 = UIAlertAction(title: "変更を破棄", style: UIAlertAction.Style.destructive, handler: {
+            (action: UIAlertAction!) in
+            print("変更を破棄")
+        })
+        
+        let myAction_2 = UIAlertAction(title: "変更を保存", style: UIAlertAction.Style.default, handler: {
+            (action: UIAlertAction!) in
+            print("変更を保存")
+        })
+        
+        let myAction_3 = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler: {
+            (action: UIAlertAction!) in
+            print("キャンセル")
+        })
+        
+        // アクションを追加.
+        myAlert.addAction(myAction_1)
+        myAlert.addAction(myAction_2)
+        myAlert.addAction(myAction_3)
+        
+        self.present(myAlert, animated: true, completion: nil)
+        
+        
     }
     
     
-    @objc func back() {
-        self.dismiss(animated: true, completion: nil)
-    }
 
     @IBAction func monButton(){
         day = 0
@@ -113,17 +141,28 @@ class ScheduleEditViewController: UIViewController, UITextFieldDelegate {
         classNameTextField.text = className
 
     }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // 今フォーカスが当たっているテキストボックスからフォーカスを外す
-        textField.resignFirstResponder()
-        print("かいぎょー")
-        return true
-    }
+//
+//    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange,
+//                  replacementText text: String) -> Bool {
+//        if text == "\n" {
+//            textView.resignFirstResponder() //キーボードを閉じる
+//            return false
+//        }
+//        return true
+//    }
 
-    
-    
-    
+    @IBAction func deleteButton(){
+        print("削除するよー")
+    }
+//
+//    func textViewDidChange(_ textView: UITextView){
+//        print("textViewDidChange")
+//    }
+//
+//    func textFieldDidChange(){
+//        print("textFieldDidChange")
+//    }
+//
     
     /*
     // MARK: - Navigation

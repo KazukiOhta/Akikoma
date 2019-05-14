@@ -30,7 +30,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="0yT-U4-TbB">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <rect key="frame" x="-6" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -205,8 +205,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="E0R-5T-DVo"/>
-                        <segue destination="1MP-QY-2gX" kind="relationship" relationship="viewControllers" id="NtJ-ep-rWP"/>
                         <segue destination="T4x-eU-D4i" kind="relationship" relationship="viewControllers" id="9hq-IH-ChI"/>
+                        <segue destination="B4B-Lk-Q6W" kind="relationship" relationship="viewControllers" id="D8L-fC-kZd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1GU-v6-7jL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -246,7 +246,7 @@
             </objects>
             <point key="canvasLocation" x="2107" y="1499"/>
         </scene>
-        <!--Schedule Edit View Controller-->
+        <!--Title-->
         <scene sceneID="xkp-XJ-aPh">
             <objects>
                 <viewController id="ZkV-vW-SYY" customClass="ScheduleEditViewController" customModule="Akikoma" customModuleProvider="target" sceneMemberID="viewController">
@@ -393,6 +393,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9wv-iu-Dld"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="Oth-6y-cA7">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; 戻る" id="3sc-lh-Ask">
+                            <connections>
+                                <action selector="backButton" destination="ZkV-vW-SYY" id="Q5k-9A-hdh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="classNameTextField" destination="z8O-2h-wJ8" id="dCa-OM-5Eq"/>
                         <outlet property="friBtn" destination="LNF-eS-ida" id="Jae-Kw-Ts3"/>
@@ -413,39 +420,65 @@
             <point key="canvasLocation" x="3015.9420289855075" y="1498.6607142857142"/>
         </scene>
         <!--時間割表-->
-        <scene sceneID="bSb-B1-gS6">
+        <scene sceneID="lLj-TL-ZTC">
             <objects>
-                <collectionViewController title="時間割表" id="1MP-QY-2gX" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="INk-cV-9o3">
+                <viewController title="時間割表" id="B4B-Lk-Q6W" customClass="ScheduleGridViewController" customModule="Akikoma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O30-9d-Qpf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a9C-Rd-Sve">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DnE-Yu-Ikf">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KKD-bG-Qo8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="1MP-QY-2gX" id="8Mb-SA-O1L"/>
-                            <outlet property="delegate" destination="1MP-QY-2gX" id="6fZ-C4-PID"/>
-                        </connections>
-                    </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="DO8-fD-QKv"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EvH-wl-xsB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aFx-EX-7aH">
+                                    <size key="itemSize" width="187" height="151"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="xSZ-hf-B52">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcV-Tw-hgW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jl-eX-aXk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <size key="customSize" width="150" height="150"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="B4B-Lk-Q6W" id="jFP-oY-kb8"/>
+                                    <outlet property="delegate" destination="B4B-Lk-Q6W" id="tUx-4H-v3q"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HJD-F8-aOF"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="h8v-Gb-JZ4"/>
+                    <connections>
+                        <outlet property="scheduleGridCollectionView" destination="KKD-bG-Qo8" id="EAq-P8-Dq8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50W-bn-srb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2106" y="46"/>
+            <point key="canvasLocation" x="2818.840579710145" y="53.571428571428569"/>
         </scene>
     </scenes>
 </document>

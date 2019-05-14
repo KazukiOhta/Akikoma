@@ -7,6 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF865463228A95F300CA9DDE /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865445228A95F300CA9DDE /* Icon-29.png */; };
+		CF865464228A95F300CA9DDE /* Icon-16.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865446228A95F300CA9DDE /* Icon-16.png */; };
+		CF865465228A95F300CA9DDE /* Icon-256.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865447228A95F300CA9DDE /* Icon-256.png */; };
+		CF865466228A95F300CA9DDE /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865448228A95F300CA9DDE /* Icon-120.png */; };
+		CF865467228A95F300CA9DDE /* Icon-88.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865449228A95F300CA9DDE /* Icon-88.png */; };
+		CF865468228A95F300CA9DDE /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = CF86544A228A95F300CA9DDE /* Icon-144.png */; };
+		CF865469228A95F300CA9DDE /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = CF86544B228A95F300CA9DDE /* Icon-76.png */; };
+		CF86546A228A95F300CA9DDE /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = CF86544C228A95F300CA9DDE /* Icon-60.png */; };
+		CF86546B228A95F300CA9DDE /* Icon-48.png in Resources */ = {isa = PBXBuildFile; fileRef = CF86544D228A95F300CA9DDE /* Icon-48.png */; };
+		CF86546C228A95F300CA9DDE /* Icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = CF86544E228A95F300CA9DDE /* Icon-1024.png */; };
+		CF86546D228A95F300CA9DDE /* Icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = CF86544F228A95F300CA9DDE /* Icon-152.png */; };
+		CF86546E228A95F300CA9DDE /* Icon-180.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865450228A95F300CA9DDE /* Icon-180.png */; };
+		CF86546F228A95F300CA9DDE /* Icon-64.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865451228A95F300CA9DDE /* Icon-64.png */; };
+		CF865470228A95F300CA9DDE /* Icon-58.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865452228A95F300CA9DDE /* Icon-58.png */; };
+		CF865471228A95F300CA9DDE /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865453228A95F300CA9DDE /* Icon-72.png */; };
+		CF865472228A95F300CA9DDE /* Icon-196.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865454228A95F300CA9DDE /* Icon-196.png */; };
+		CF865473228A95F300CA9DDE /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865455228A95F300CA9DDE /* Icon-80.png */; };
+		CF865474228A95F300CA9DDE /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865456228A95F300CA9DDE /* Icon-57.png */; };
+		CF865475228A95F300CA9DDE /* Icon-55.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865457228A95F300CA9DDE /* Icon-55.png */; };
+		CF865476228A95F300CA9DDE /* Icon-172.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865458228A95F300CA9DDE /* Icon-172.png */; };
+		CF865477228A95F300CA9DDE /* Icon-167.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865459228A95F300CA9DDE /* Icon-167.png */; };
+		CF865478228A95F300CA9DDE /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = CF86545A228A95F300CA9DDE /* Icon-40.png */; };
+		CF865479228A95F300CA9DDE /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = CF86545B228A95F300CA9DDE /* Icon-50.png */; };
+		CF86547A228A95F300CA9DDE /* Icon-87.png in Resources */ = {isa = PBXBuildFile; fileRef = CF86545C228A95F300CA9DDE /* Icon-87.png */; };
+		CF86547B228A95F300CA9DDE /* Icon-20.png in Resources */ = {isa = PBXBuildFile; fileRef = CF86545D228A95F300CA9DDE /* Icon-20.png */; };
+		CF86547C228A95F300CA9DDE /* Icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = CF86545E228A95F300CA9DDE /* Icon-128.png */; };
+		CF86547D228A95F300CA9DDE /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = CF86545F228A95F300CA9DDE /* Icon-100.png */; };
+		CF86547E228A95F300CA9DDE /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865460228A95F300CA9DDE /* Icon-114.png */; };
+		CF86547F228A95F300CA9DDE /* Icon-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865461228A95F300CA9DDE /* Icon-32.png */; };
+		CF865480228A95F300CA9DDE /* Icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = CF865462228A95F300CA9DDE /* Icon-512.png */; };
 		CF9CEF7422858DEF00E434AA /* ScheduleListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9CEF7222858DEF00E434AA /* ScheduleListTableViewCell.swift */; };
 		CF9CEF7522858DEF00E434AA /* ScheduleListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9CEF7322858DEF00E434AA /* ScheduleListTableViewCell.xib */; };
 		CF9CEF77228591F800E434AA /* ScheduleListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9CEF76228591F800E434AA /* ScheduleListTableViewController.swift */; };
@@ -17,6 +47,7 @@
 		CFC656A2226AC5DF00C1424D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC656A0226AC5DF00C1424D /* LaunchScreen.storyboard */; };
 		CFC656AD226AC5DF00C1424D /* AkikomaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC656AC226AC5DF00C1424D /* AkikomaTests.swift */; };
 		CFC656B8226AC5DF00C1424D /* AkikomaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC656B7226AC5DF00C1424D /* AkikomaUITests.swift */; };
+		CFD6E2872286B96600216A8C /* ScheduleGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD6E2862286B96600216A8C /* ScheduleGridViewController.swift */; };
 		CFE67E18226ADC20003641B4 /* AkikomaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE67E17226ADC20003641B4 /* AkikomaViewController.swift */; };
 		CFE67E1A226AEE3D003641B4 /* AkikomaEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE67E19226AEE3D003641B4 /* AkikomaEditViewController.swift */; };
 		CFE67E1C226AF20C003641B4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE67E1B226AF20C003641B4 /* Extension.swift */; };
@@ -41,6 +72,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF865445228A95F300CA9DDE /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
+		CF865446228A95F300CA9DDE /* Icon-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-16.png"; sourceTree = "<group>"; };
+		CF865447228A95F300CA9DDE /* Icon-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-256.png"; sourceTree = "<group>"; };
+		CF865448228A95F300CA9DDE /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
+		CF865449228A95F300CA9DDE /* Icon-88.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-88.png"; sourceTree = "<group>"; };
+		CF86544A228A95F300CA9DDE /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-144.png"; sourceTree = "<group>"; };
+		CF86544B228A95F300CA9DDE /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		CF86544C228A95F300CA9DDE /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		CF86544D228A95F300CA9DDE /* Icon-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-48.png"; sourceTree = "<group>"; };
+		CF86544E228A95F300CA9DDE /* Icon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-1024.png"; sourceTree = "<group>"; };
+		CF86544F228A95F300CA9DDE /* Icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-152.png"; sourceTree = "<group>"; };
+		CF865450228A95F300CA9DDE /* Icon-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-180.png"; sourceTree = "<group>"; };
+		CF865451228A95F300CA9DDE /* Icon-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-64.png"; sourceTree = "<group>"; };
+		CF865452228A95F300CA9DDE /* Icon-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-58.png"; sourceTree = "<group>"; };
+		CF865453228A95F300CA9DDE /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		CF865454228A95F300CA9DDE /* Icon-196.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-196.png"; sourceTree = "<group>"; };
+		CF865455228A95F300CA9DDE /* Icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80.png"; sourceTree = "<group>"; };
+		CF865456228A95F300CA9DDE /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
+		CF865457228A95F300CA9DDE /* Icon-55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-55.png"; sourceTree = "<group>"; };
+		CF865458228A95F300CA9DDE /* Icon-172.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-172.png"; sourceTree = "<group>"; };
+		CF865459228A95F300CA9DDE /* Icon-167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-167.png"; sourceTree = "<group>"; };
+		CF86545A228A95F300CA9DDE /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		CF86545B228A95F300CA9DDE /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
+		CF86545C228A95F300CA9DDE /* Icon-87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-87.png"; sourceTree = "<group>"; };
+		CF86545D228A95F300CA9DDE /* Icon-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-20.png"; sourceTree = "<group>"; };
+		CF86545E228A95F300CA9DDE /* Icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-128.png"; sourceTree = "<group>"; };
+		CF86545F228A95F300CA9DDE /* Icon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-100.png"; sourceTree = "<group>"; };
+		CF865460228A95F300CA9DDE /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-114.png"; sourceTree = "<group>"; };
+		CF865461228A95F300CA9DDE /* Icon-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-32.png"; sourceTree = "<group>"; };
+		CF865462228A95F300CA9DDE /* Icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-512.png"; sourceTree = "<group>"; };
 		CF9CEF7222858DEF00E434AA /* ScheduleListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListTableViewCell.swift; sourceTree = "<group>"; };
 		CF9CEF7322858DEF00E434AA /* ScheduleListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleListTableViewCell.xib; sourceTree = "<group>"; };
 		CF9CEF76228591F800E434AA /* ScheduleListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListTableViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +118,7 @@
 		CFC656B3226AC5DF00C1424D /* AkikomaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AkikomaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC656B7226AC5DF00C1424D /* AkikomaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkikomaUITests.swift; sourceTree = "<group>"; };
 		CFC656B9226AC5DF00C1424D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFD6E2862286B96600216A8C /* ScheduleGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleGridViewController.swift; sourceTree = "<group>"; };
 		CFE67E17226ADC20003641B4 /* AkikomaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkikomaViewController.swift; sourceTree = "<group>"; };
 		CFE67E19226AEE3D003641B4 /* AkikomaEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkikomaEditViewController.swift; sourceTree = "<group>"; };
 		CFE67E1B226AF20C003641B4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -88,6 +150,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF865444228A95F300CA9DDE /* appiconmaker.co_ios */ = {
+			isa = PBXGroup;
+			children = (
+				CF865446228A95F300CA9DDE /* Icon-16.png */,
+				CF86545D228A95F300CA9DDE /* Icon-20.png */,
+				CF865445228A95F300CA9DDE /* Icon-29.png */,
+				CF865461228A95F300CA9DDE /* Icon-32.png */,
+				CF86545A228A95F300CA9DDE /* Icon-40.png */,
+				CF86544D228A95F300CA9DDE /* Icon-48.png */,
+				CF86545B228A95F300CA9DDE /* Icon-50.png */,
+				CF865457228A95F300CA9DDE /* Icon-55.png */,
+				CF865456228A95F300CA9DDE /* Icon-57.png */,
+				CF865452228A95F300CA9DDE /* Icon-58.png */,
+				CF86544C228A95F300CA9DDE /* Icon-60.png */,
+				CF865451228A95F300CA9DDE /* Icon-64.png */,
+				CF865453228A95F300CA9DDE /* Icon-72.png */,
+				CF86544B228A95F300CA9DDE /* Icon-76.png */,
+				CF865455228A95F300CA9DDE /* Icon-80.png */,
+				CF86545C228A95F300CA9DDE /* Icon-87.png */,
+				CF865449228A95F300CA9DDE /* Icon-88.png */,
+				CF86545F228A95F300CA9DDE /* Icon-100.png */,
+				CF865460228A95F300CA9DDE /* Icon-114.png */,
+				CF865448228A95F300CA9DDE /* Icon-120.png */,
+				CF86545E228A95F300CA9DDE /* Icon-128.png */,
+				CF86544A228A95F300CA9DDE /* Icon-144.png */,
+				CF86544F228A95F300CA9DDE /* Icon-152.png */,
+				CF865459228A95F300CA9DDE /* Icon-167.png */,
+				CF865458228A95F300CA9DDE /* Icon-172.png */,
+				CF865450228A95F300CA9DDE /* Icon-180.png */,
+				CF865454228A95F300CA9DDE /* Icon-196.png */,
+				CF865447228A95F300CA9DDE /* Icon-256.png */,
+				CF865462228A95F300CA9DDE /* Icon-512.png */,
+				CF86544E228A95F300CA9DDE /* Icon-1024.png */,
+			);
+			path = appiconmaker.co_ios;
+			sourceTree = "<group>";
+		};
 		CFC6568B226AC5DE00C1424D = {
 			isa = PBXGroup;
 			children = (
@@ -111,12 +210,14 @@
 		CFC65696226AC5DE00C1424D /* Akikoma */ = {
 			isa = PBXGroup;
 			children = (
+				CF865444228A95F300CA9DDE /* appiconmaker.co_ios */,
 				CFC65697226AC5DE00C1424D /* AppDelegate.swift */,
 				CFE67E17226ADC20003641B4 /* AkikomaViewController.swift */,
 				CFE67E19226AEE3D003641B4 /* AkikomaEditViewController.swift */,
 				CFE67E1D226AF73D003641B4 /* Common.swift */,
 				CFE67E1B226AF20C003641B4 /* Extension.swift */,
 				CFC6569B226AC5DE00C1424D /* Main.storyboard */,
+				CFD6E2862286B96600216A8C /* ScheduleGridViewController.swift */,
 				CF9CEF7222858DEF00E434AA /* ScheduleListTableViewCell.swift */,
 				CF9CEF76228591F800E434AA /* ScheduleListTableViewController.swift */,
 				CF9CEF7822859ACA00E434AA /* ScheduleEditViewController.swift */,
@@ -250,10 +351,40 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF865466228A95F300CA9DDE /* Icon-120.png in Resources */,
+				CF86546C228A95F300CA9DDE /* Icon-1024.png in Resources */,
+				CF86547F228A95F300CA9DDE /* Icon-32.png in Resources */,
+				CF865480228A95F300CA9DDE /* Icon-512.png in Resources */,
 				CFC656A2226AC5DF00C1424D /* LaunchScreen.storyboard in Resources */,
+				CF865477228A95F300CA9DDE /* Icon-167.png in Resources */,
+				CF86546A228A95F300CA9DDE /* Icon-60.png in Resources */,
 				CFC6569F226AC5DF00C1424D /* Assets.xcassets in Resources */,
+				CF865470228A95F300CA9DDE /* Icon-58.png in Resources */,
+				CF86547A228A95F300CA9DDE /* Icon-87.png in Resources */,
 				CF9CEF7522858DEF00E434AA /* ScheduleListTableViewCell.xib in Resources */,
+				CF865478228A95F300CA9DDE /* Icon-40.png in Resources */,
+				CF865476228A95F300CA9DDE /* Icon-172.png in Resources */,
+				CF86547E228A95F300CA9DDE /* Icon-114.png in Resources */,
+				CF86546B228A95F300CA9DDE /* Icon-48.png in Resources */,
 				CFC6569D226AC5DE00C1424D /* Main.storyboard in Resources */,
+				CF86547D228A95F300CA9DDE /* Icon-100.png in Resources */,
+				CF865467228A95F300CA9DDE /* Icon-88.png in Resources */,
+				CF865469228A95F300CA9DDE /* Icon-76.png in Resources */,
+				CF865463228A95F300CA9DDE /* Icon-29.png in Resources */,
+				CF865471228A95F300CA9DDE /* Icon-72.png in Resources */,
+				CF86547B228A95F300CA9DDE /* Icon-20.png in Resources */,
+				CF865472228A95F300CA9DDE /* Icon-196.png in Resources */,
+				CF865473228A95F300CA9DDE /* Icon-80.png in Resources */,
+				CF865465228A95F300CA9DDE /* Icon-256.png in Resources */,
+				CF865468228A95F300CA9DDE /* Icon-144.png in Resources */,
+				CF865479228A95F300CA9DDE /* Icon-50.png in Resources */,
+				CF86546D228A95F300CA9DDE /* Icon-152.png in Resources */,
+				CF86546F228A95F300CA9DDE /* Icon-64.png in Resources */,
+				CF865475228A95F300CA9DDE /* Icon-55.png in Resources */,
+				CF86546E228A95F300CA9DDE /* Icon-180.png in Resources */,
+				CF865474228A95F300CA9DDE /* Icon-57.png in Resources */,
+				CF86547C228A95F300CA9DDE /* Icon-128.png in Resources */,
+				CF865464228A95F300CA9DDE /* Icon-16.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +413,7 @@
 				CFE67E18226ADC20003641B4 /* AkikomaViewController.swift in Sources */,
 				CF9CEF7922859ACA00E434AA /* ScheduleEditViewController.swift in Sources */,
 				CFE67E1A226AEE3D003641B4 /* AkikomaEditViewController.swift in Sources */,
+				CFD6E2872286B96600216A8C /* ScheduleGridViewController.swift in Sources */,
 				CF9CEF7422858DEF00E434AA /* ScheduleListTableViewCell.swift in Sources */,
 				CFC65698226AC5DE00C1424D /* AppDelegate.swift in Sources */,
 				CFE67E1E226AF73D003641B4 /* Common.swift in Sources */,
@@ -463,6 +595,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8L5RSFK5R4;
 				INFOPLIST_FILE = Akikoma/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,6 +614,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8L5RSFK5R4;
 				INFOPLIST_FILE = Akikoma/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

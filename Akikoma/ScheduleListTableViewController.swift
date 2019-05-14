@@ -10,7 +10,7 @@ import UIKit
 
 class ScheduleListTableViewController: UITableViewController {
 
-    var ScheduleDictArray:[[Any]] = [[5, -1, "新規作成"], [0, 0, "振動波動論"], [0, 1, "物性化学"], [0, 2, "人間行動基礎論"], [0, 4, "実践的機械学習研究"], [1, 1, "スポーツ身体運動実習"], [1, 4, "計算の理論"], [1, 5, "Arduinoを使って応用システムを作ろう"], [2, 1, "生命科学"], [2, 3, "宇宙科学実習Ⅱ"], [2, 4, "宇宙科学実習Ⅱ"], [3, 1, "物性科学"], [3, 4, "実践的機械学習研究"], [4, 1, "基礎統計"], [4, 2, "基礎化学実験"], [4, 3, "基礎化学実験"], [4, 4, "囲碁で養う考える力"], [4, 5, "ロボット競技を体験しよう"]]
+    var ScheduleArrays:[[Any]] = [[5, -1, "新規作成"], [0, 0, "振動波動論"], [0, 1, "物性化学"], [0, 2, "人間行動基礎論"], [0, 4, "実践的機械学習研究"], [1, 1, "スポーツ身体運動実習"], [1, 4, "計算の理論"], [1, 5, "Arduinoを使って応用システムを作ろう"], [2, 1, "生命科学"], [2, 3, "宇宙科学実習Ⅱ"], [2, 4, "宇宙科学実習Ⅱ"], [3, 1, "物性科学"], [3, 4, "実践的機械学習研究"], [4, 1, "基礎統計"], [4, 2, "基礎化学実験"], [4, 3, "基礎化学実験"], [4, 4, "囲碁で養う考える力"], [4, 5, "ロボット競技を体験しよう"]]
 
     
     override func viewDidLoad() {
@@ -39,14 +39,14 @@ class ScheduleListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return ScheduleDictArray.count
+        return ScheduleArrays.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ScheduleListTableViewCell
         
-        let nowIndexPathDictionary = ScheduleDictArray[indexPath.row]
+        let nowIndexPathDictionary = ScheduleArrays[indexPath.row]
         
         cell.dayLabel.text = ["月", "火", "水", "木", "金", "+"][(nowIndexPathDictionary[0] as! Int)]
         cell.periodLabel.text = String(nowIndexPathDictionary[1] as! Int + 1)
@@ -63,7 +63,8 @@ class ScheduleListTableViewController: UITableViewController {
         performSegue(withIdentifier: "toScheduleEditView",sender: nil)
 
         //ここに遷移処理を書く
-//        self.present(ScheduleEditViewController(), animated: true, completion: nil)
+        //self.present(ScheduleEditViewController(), animated: true, completion: nil)
+        //self.navigationController?.pushViewController(ScheduleEditViewController(), animated: true)
     }
     
     
